@@ -14,6 +14,7 @@ public class Flying extends Birds {
     }
 
     public String getTypeMovement() {
+
         return typeMovement;
     }
 
@@ -21,8 +22,12 @@ public class Flying extends Birds {
 
     }
 
+    public void setTypeMovement(String typeMovement) {
+        this.typeMovement = typeMovement;
+    }
+
     @Override
-    protected void hunt() {
+    public void hunt() {
 
     }
 }

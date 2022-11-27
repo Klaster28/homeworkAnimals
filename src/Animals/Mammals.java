@@ -1,10 +1,12 @@
 package Animals;
 
-public abstract class Mammals extends Animals {
-    private String livingEnvironment;
-    private double travelSpeed = 0;
+public class Mammals extends Animals {
+    private final String livingEnvironment;
+    private int travelSpeed;
 
-    public Mammals(String name, int age, String livingEnvironment, double travelSpeed) {
+
+
+    public Mammals(String name, int age, String livingEnvironment, int travelSpeed) {
         super(name, age);
         if(livingEnvironment  == null || livingEnvironment.isEmpty()|| livingEnvironment.isBlank()){
             this.livingEnvironment = "Нет данных";
@@ -18,7 +20,9 @@ public abstract class Mammals extends Animals {
         }
 
     }
-    public abstract void walk();
+    protected   void walk(){
+
+    }
 
     @Override
     public void eat() {
@@ -33,5 +37,16 @@ public abstract class Mammals extends Animals {
     @Override
     public void move() {
 
+    }
+    public int getTravelSpeed() {
+        return travelSpeed;
+    }
+
+    public void setTravelSpeed(int travelSpeed) {
+        this.travelSpeed = travelSpeed;
+    }
+
+    public String getLivingEnvironment() {
+        return livingEnvironment;
     }
 }

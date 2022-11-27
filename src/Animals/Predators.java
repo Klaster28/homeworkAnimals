@@ -1,7 +1,7 @@
 package Animals;
 
-public abstract class Predators {
-    private String typeFood;
+public  class Predators {
+    private final String typeFood;
 
 
 
@@ -17,5 +17,7 @@ public abstract class Predators {
         return typeFood;
     }
 
-    public abstract void hunt();
+    public void hunt(){
+
+    }
 }

@@ -1,7 +1,7 @@
 package Animals;
 
 public abstract class Birds {
-    private String livingEnvironment;
+    private final String livingEnvironment;
 
     public Birds(String livingEnvironment) {
         if(livingEnvironment  == null || livingEnvironment.isEmpty()|| livingEnvironment.isBlank()){
@@ -15,5 +15,7 @@ public abstract class Birds {
         return livingEnvironment;
     }
 
-    protected abstract void hunt();
+    public void hunt(){
+
+    }
 }
