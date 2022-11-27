@@ -5,7 +5,7 @@ import java.util.Objects;
 public class Herbivores extends Mammals {
     private String typeFood;
 
-    public Herbivores(String name, int age, String livingEnvironment, int travelSpeed) {
+    public Herbivores(String name, int age, String livingEnvironment, int travelSpeed,String typeFood) {
         super(name, age, livingEnvironment, travelSpeed);
 
         if(typeFood  == null || typeFood.isEmpty()|| typeFood.isBlank()){

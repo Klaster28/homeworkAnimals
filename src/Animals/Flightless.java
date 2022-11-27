@@ -1,17 +1,23 @@
 package Animals;
 
 
-    public  class Flightless extends Birds {
+import java.util.Objects;
+
+public  class Flightless extends Birds {
 
     private String typeMovement;
 
-    private  Flightless(String livingEnvironment, String typeMovement) {
-        super(livingEnvironment);
+    public Flightless(String name, int age, String livingEnvironment,String typeMovement) {
+            super(name, age, livingEnvironment);
+
         if (typeMovement == null || typeMovement.isEmpty() || typeMovement.isBlank()) {
             this.typeMovement = "Нет данных";
         } else {
             this.typeMovement = typeMovement;
         }
+
+
+
     }
 
         public String getTypeMovement() {
@@ -19,7 +25,7 @@ package Animals;
             return typeMovement;
         }
 
-        private void walk() {
+        protected void walk() {
 
         }
 
@@ -31,4 +37,25 @@ package Animals;
         public void hunt() {
 
         }
+
+        @Override
+        public String toString() {
+            return "Flightless{" +
+                    "typeMovement='" + typeMovement + '\'' +
+                    '}';
+        }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Flightless that = (Flightless) o;
+        return typeMovement.equals(that.typeMovement);
     }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), typeMovement);
+    }
+}

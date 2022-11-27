@@ -49,4 +49,12 @@ public class Mammals extends Animals {
     public String getLivingEnvironment() {
         return livingEnvironment;
     }
+
+    @Override
+    public String toString() {
+        return "Mammals{" +
+                "livingEnvironment='" + livingEnvironment + '\'' +
+                ", travelSpeed=" + travelSpeed +
+                '}';
+    }
 }
